@@ -3,7 +3,7 @@ class Sale < ApplicationRecord
   belongs_to :user
   belongs_to :discount
   has_many :product_quantities
-  has_one :comission
+  has_one :comission, dependent: :destroy
 
   after_save do
     calc = 0

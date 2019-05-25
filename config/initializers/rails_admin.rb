@@ -1,5 +1,8 @@
 RailsAdmin.config do |config|
 
+  require Rails.root.join('lib', 'rails_admin', 'rails_admin_pdf.rb')
+  RailsAdmin::Config::Actions.register(RailsAdmin::Config::Actions::Pdf)
+
 
   config.main_app_name = ["Sistema PDV", ""]
 
@@ -66,7 +69,39 @@ config.model Sale do
   end
 end
 
+config.model Comission do
+   navigation_icon 'fa fa-handshake-o'
+end
+
+config.model Discount do
+   navigation_icon 'fa fa-usd'
+   create do
+    field  :name
+    field  :description
+    field  :value
+    field  :kind
+    field  :status
+  end
+ 
+  edit do
+    field  :name
+    field  :description
+    field  :value
+    field  :kind
+    field  :status
+  end
+ 
+  list do
+    field  :name
+    field  :description
+    field  :value
+    field  :kind
+    field  :status
+  end
+end
+
 config.model User do
+  navigation_icon 'fa fa-user'
   create do
     field  :name
     field  :document
@@ -85,6 +120,7 @@ config.model User do
 end
 
 config.model Product do
+  navigation_icon 'fa fa-shopping-bag'
   create do
     field  :name
     field  :description
@@ -103,6 +139,7 @@ config.model Product do
 end
  
 config.model Client do
+  navigation_icon 'fa fa-users'
   create do
     field  :name
     field  :company_name
@@ -129,7 +166,6 @@ config.model Client do
     field  :notes
     field  :status
     field  :address
- 
  
     field :user_id, :hidden do
       default_value do
@@ -211,6 +247,9 @@ end
     edit
     delete
     show_in_app
+    pdf do
+      only User
+    end
 
     ## With an audit adapter, you can add:
     # history_index

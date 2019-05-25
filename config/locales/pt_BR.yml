@@ -98,15 +98,31 @@ pt-BR:
       day: Dia
       month: Mês
       year: Ano
+
   activerecord:
     models:
       client:
         one: Cliente
         other: Clientes
-    attributes:
-      client:
-        name: "Nome"
-        company_name: "Nome da Empresa"
+      sale:
+        one: Venda
+        other: Vendas
+      user:
+        one: Usuário
+        other: Usuários
+      product:
+        one: Produto
+        other: Produtos
+      discount:
+        one: Desconto
+        other: Descontos
+      comission:
+        one: Comissão
+        other: Comissões
+    #attributes:
+     # client:
+     #   name: "Nome"
+     #   company_name: "Nome da Empresa"
   time:
     am: ''
     formats:

@@ -24,6 +24,11 @@ gem 'cancancan', '~> 1.15.0'
 
 gem 'carrierwave'
 
+# Gem para gerar os pdfs
+gem 'prawn-rails'
+# Gem para gerar os gráficos
+gem 'gruff'
+
 gem 'rails_admin_rollincode', :git => 'git@gitlab.com:dylnara.azevedo/rollincode_custom.git'
 
 # Use CoffeeScript for .coffee assets and views
