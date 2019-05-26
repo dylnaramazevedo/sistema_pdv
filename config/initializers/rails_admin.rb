@@ -104,7 +104,8 @@ config.model User do
   navigation_icon 'fa fa-user'
   create do
     field  :name
-    field  :document
+    field  :email
+    field  :password
     field  :kind
     field  :status
     field  :notes
@@ -112,7 +113,16 @@ config.model User do
  
   edit do
     field  :name
-    field  :document
+    field  :email
+    field  :password
+    field  :kind
+    field  :status
+    field  :notes
+  end
+
+  list do
+    field  :name
+    field  :email
     field  :kind
     field  :status
     field  :notes
