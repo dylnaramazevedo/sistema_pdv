@@ -28,7 +28,7 @@ gem 'prawn-rails'
 # Gem para gerar os gráficos
 gem 'gruff'
 
-gem 'rails_admin_rollincode', :git => 'git@gitlab.com:dylnara.azevedo/rollincode_custom.git'
+gem 'rails_admin_rollincode'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
