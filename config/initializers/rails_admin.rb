@@ -78,6 +78,13 @@ end
 
 config.model Comission do
    navigation_icon 'fa fa-handshake-o'
+   list do
+    field  :sale_id
+    field  :value
+    field  :user_id
+    field  :status
+    field  :note
+  end
 end
 
 config.model Address do
