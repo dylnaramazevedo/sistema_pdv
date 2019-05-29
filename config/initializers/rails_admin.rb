@@ -67,10 +67,64 @@ config.model Sale do
       end
     end
   end
+
+  list do
+    field  :client
+    field  :sale_date
+    field  :discount
+    field  :product_quantities
+  end
 end
 
 config.model Comission do
    navigation_icon 'fa fa-handshake-o'
+end
+
+config.model Address do
+  create do
+    field  :country
+    field  :city
+    field  :state
+    field  :neighborhood
+    field  :street
+    field  :number
+ 
+    field :user_id, :hidden do
+      default_value do
+        bindings[:view]._current_user.id
+      end
+    end
+  end
+ 
+  edit do
+    field  :country
+    field  :city
+    field  :state
+    field  :neighborhood
+    field  :street
+    field  :number
+ 
+    field :user_id, :hidden do
+      default_value do
+        bindings[:view]._current_user.id
+      end
+    end
+  end
+ 
+  list do
+    field  :country
+    field  :city
+    field  :state
+    field  :neighborhood
+    field  :street
+    field  :number
+ 
+    field :user_id, :hidden do
+      default_value do
+        bindings[:view]._current_user.id
+      end
+    end
+  end
 end
 
 config.model Discount do
@@ -93,7 +147,6 @@ config.model Discount do
  
   list do
     field  :name
-    field  :description
     field  :value
     field  :kind
     field  :status
@@ -146,6 +199,14 @@ config.model Product do
     field  :price
     field  :photo
   end
+
+  list do
+    field  :name
+    field  :description
+    field  :status
+    field  :price
+    field  :photo
+  end
 end
  
 config.model Client do
@@ -189,7 +250,7 @@ config.model Client do
     field  :company_name
     #field  :document
     #field  :email
-    field  :phone
+    #field  :phone
     field  :notes
     field  :status
     #field  :address
