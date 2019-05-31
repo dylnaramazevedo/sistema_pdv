@@ -8,4 +8,6 @@ Sistema ainda em construção, para um gerenciamento de vendas usando a Gem rail
 
 * PgAdmin 4
 
+* Email e senha de acesso, no arquivo db/seed.rb
+
 * Hospedado no Heroku - https://pdv-admin.herokuapp.com
